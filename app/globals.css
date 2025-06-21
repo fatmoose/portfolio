@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+/* Technical theme styles */
+.theme-technical {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #000000;
+  color: #00ff00;
+}
+
+/* Professional theme styles */
+.theme-professional {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+}
+
+/* GIS theme styles */
+.theme-gis {
+  font-family: system-ui, -apple-system, sans-serif;
+  background-color: #0f172a;
+  color: #10b981;
+}
+
+/* Custom scrollbar for technical theme */
+.theme-technical ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.theme-technical ::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.theme-technical ::-webkit-scrollbar-thumb {
+  background: #00ff00;
+  border-radius: 4px;
+}
+
+.theme-technical ::-webkit-scrollbar-thumb:hover {
+  background: #00cc00;
+}
+
+/* Custom scrollbar for professional theme */
+.theme-professional ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.theme-professional ::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+.theme-professional ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+.theme-professional ::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Custom scrollbar for GIS theme */
+.theme-gis ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.theme-gis ::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+.theme-gis ::-webkit-scrollbar-thumb {
+  background: #10b981;
+  border-radius: 4px;
+}
+
+.theme-gis ::-webkit-scrollbar-thumb:hover {
+  background: #059669;
+}
+
+/* Terminal cursor - only for technical theme */
+.theme-technical .cursor::after {
+  content: '|';
+  animation: blink 1s infinite;
+  color: #00ff00;
+}
+
+/* Matrix effect */
+.matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.glitch::before {
+  animation: glitch-1 2s infinite;
+  color: #ff0000;
+  z-index: -1;
+}
+
+.glitch::after {
+  animation: glitch-2 2s infinite;
+  color: #0000ff;
+  z-index: -2;
+}
+
+@keyframes glitch-1 {
+  0%, 14%, 15%, 49%, 50%, 99%, 100% {
+    transform: translate(0);
+  }
+  15%, 49% {
+    transform: translate(-2px, 2px);
+  }
+}
+
+@keyframes glitch-2 {
+  0%, 20%, 21%, 62%, 63%, 99%, 100% {
+    transform: translate(0);
+  }
+  21%, 62% {
+    transform: translate(2px, -2px);
+  }
+}
+
+/* Terminal window */
+.terminal-window {
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+  background: #000000;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+.terminal-header {
+  background: #1a1a1a;
+  padding: 8px 16px;
+  border-bottom: 1px solid #00ff00;
+  border-radius: 8px 8px 0 0;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.terminal-button.red { background: #ff5f56; }
+.terminal-button.yellow { background: #ffbd2e; }
+.terminal-button.green { background: #27ca3f; }
+
+/* Selection styling for technical theme */
+.theme-technical ::selection {
+  background: #00ff00;
+  color: #000000;
+}
+
+/* Selection styling for professional theme */
+.theme-professional ::selection {
+  background: #3b82f6;
+  color: #ffffff;
+}
+
+/* Selection styling for GIS theme */
+.theme-gis ::selection {
+  background: #10b981;
+  color: #ffffff;
+}
+
+/* Theme selector modal - clear scrollbar */
+.theme-selector-modal::-webkit-scrollbar {
+  width: 8px;
+}
+
+.theme-selector-modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.theme-selector-modal::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.theme-selector-modal::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* Focus styles for technical theme */
+.theme-technical *:focus {
+  outline: 2px solid #00ff00;
+  outline-offset: 2px;
+}
+
+/* Focus styles for professional theme */
+.theme-professional *:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Focus styles for GIS theme */
+.theme-gis *:focus {
+  outline: 2px solid #10b981;
+  outline-offset: 2px;
+}
+
+/* Animation keyframes */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+/* Animation delays for staggered effects */
+.animate-delay-100 { animation-delay: 0.1s; }
+.animate-delay-200 { animation-delay: 0.2s; }
+.animate-delay-300 { animation-delay: 0.3s; }
+.animate-delay-400 { animation-delay: 0.4s; }
+.animate-delay-500 { animation-delay: 0.5s; } 
