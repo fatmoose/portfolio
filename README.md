@@ -22,75 +22,6 @@ A modern, terminal-themed portfolio website built with Next.js, featuring a hack
 - **Email**: Nodemailer
 - **Deployment**: Vercel-ready
 
-## 📦 Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   cd portfolio
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up environment variables**
-   ```bash
-   cp env.example .env.local
-   ```
-   
-   Edit `.env.local` and add your email configuration:
-   ```env
-   EMAIL_USER=your-email@gmail.com
-   EMAIL_PASSWORD=your-app-password
-   ```
-
-4. **Run the development server**
-   ```bash
-   npm run dev
-   ```
-
-5. **Open your browser**
-   Navigate to [http://localhost:3000](http://localhost:3000)
-
-## 📧 Email Configuration
-
-To enable the contact form, you need to set up email configuration:
-
-### For Gmail:
-1. Enable 2-factor authentication on your Google account
-2. Go to Google Account Settings > Security > 2-Step Verification > App passwords
-3. Generate a new app password
-4. Use your Gmail address as `EMAIL_USER` and the app password as `EMAIL_PASSWORD`
-
-### For other email providers:
-Update the transporter configuration in `app/api/contact/route.ts` with your SMTP settings.
-
-## 🚀 Deployment
-
-### Vercel (Recommended)
-
-1. **Push to GitHub**
-   ```bash
-   git add .
-   git commit -m "Initial commit"
-   git push origin main
-   ```
-
-2. **Deploy to Vercel**
-   - Go to [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Add your environment variables in the Vercel dashboard
-   - Deploy!
-
-### Other Platforms
-
-This project can be deployed on any platform that supports Next.js:
-- Netlify
-- Railway
-- Heroku
-- DigitalOcean App Platform
 
 ## 📁 Project Structure
 
@@ -171,20 +102,11 @@ The portfolio is fully responsive and includes:
 - Fast loading times
 - SEO-friendly structure
 
-## 🔒 Security
-
-- Input validation on contact form
-- CSRF protection via Next.js
-- Environment variable protection
-- Safe email handling
 
 ## 🤝 Contributing
 
-Feel free to fork this project and customize it for your own portfolio. If you have suggestions for improvements, please open an issue or submit a pull request.
+Feel free to fork this project and customize it for your own portfolio.
 
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ## 📞 Contact
 
@@ -193,5 +115,3 @@ This project is open source and available under the [MIT License](LICENSE).
 - **GitHub**: [github.com/yashkatwal](https://github.com/yashkatwal)
 
 ---
-
-Built with ❤️ by Yash Katwal 
