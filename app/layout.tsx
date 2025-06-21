@@ -11,14 +11,33 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Yash Katwal - Software Engineer',
-  description: 'Portfolio of Yash Katwal - Software Engineer, Full Stack Developer, and Tech Enthusiast',
+  title: 'Yash Katwal Portfolio',
+  description: 'Portfolio of Yash Katwal - Software Engineer, Admin Assistant, and GIS Analyst',
   keywords: 'Yash Katwal, Software Engineer, Full Stack Developer, React, Next.js, Node.js, Python, Portfolio',
   authors: [{ name: 'Yash Katwal' }],
+  icons: {
+    icon: '/profile.jpg',
+    shortcut: '/profile.jpg',
+    apple: '/profile.jpg',
+  },
   openGraph: {
-    title: 'Yash Katwal - Software Engineer',
+    title: 'Yash Katwal Portfolio',
     description: 'Portfolio of Yash Katwal - Software Engineer, Full Stack Developer, and Tech Enthusiast',
     type: 'website',
+    images: [
+      {
+        url: '/profile.jpg',
+        width: 800,
+        height: 600,
+        alt: 'Yash Katwal Profile Picture',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Yash Katwal Portfolio',
+    description: 'Portfolio of Yash Katwal - Software Engineer, Full Stack Developer, and Tech Enthusiast',
+    images: ['/profile.jpg'],
   },
 }
 
