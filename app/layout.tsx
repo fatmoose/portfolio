@@ -11,10 +11,15 @@ const roboto = Roboto({
 })
 
 export const metadata: Metadata = {
-  title: 'Yash Katwal Portfolio',
-  description: 'Portfolio of Yash Katwal - Software Engineer, Admin Assistant, and GIS Analyst',
+  title: 'Yash Katwal - Portfolio',
+  description: 'Portfolio of Yash Katwal - Software Engineer and GIS Analyst',
   keywords: 'Yash Katwal, Software Engineer, Full Stack Developer, React, Next.js, Node.js, Python, Portfolio',
-  authors: [{ name: 'Yash Katwal' }],
+  authors: [
+    {
+      name: 'Yash Katwal',
+    },
+  ],
+  creator: 'Yash Katwal',
   icons: {
     icon: '/profile.jpg',
     shortcut: '/profile.jpg',

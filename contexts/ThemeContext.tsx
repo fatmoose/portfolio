@@ -2,7 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from 'react'
 
-type Theme = 'technical' | 'professional' | 'gis'
+type Theme = 'technical' | 'gis'
 
 interface ThemeContextType {
   theme: Theme
@@ -22,7 +22,7 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     const savedTheme = localStorage.getItem('portfolio-theme') as Theme
     const hasVisited = localStorage.getItem('portfolio-visited')
     
-    if (savedTheme && (savedTheme === 'technical' || savedTheme === 'professional' || savedTheme === 'gis')) {
+    if (savedTheme && (savedTheme === 'technical' || savedTheme === 'gis')) {
       setTheme(savedTheme)
     }
     
@@ -35,6 +35,9 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
   const handleSetTheme = (newTheme: Theme) => {
     setTheme(newTheme)
     localStorage.setItem('portfolio-theme', newTheme)
+    
+    // Scroll to top when switching themes
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
   return (

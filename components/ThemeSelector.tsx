@@ -1,13 +1,13 @@
 'use client'
 
 import { motion, AnimatePresence } from 'framer-motion'
-import { Code, Briefcase, Map } from 'lucide-react'
+import { Code, Map } from 'lucide-react'
 import { useTheme } from '@/contexts/ThemeContext'
 
 export default function ThemeSelector() {
   const { showThemeSelector, setShowThemeSelector, setTheme } = useTheme()
 
-  const handleThemeSelect = (selectedTheme: 'technical' | 'professional' | 'gis') => {
+  const handleThemeSelect = (selectedTheme: 'technical' | 'gis') => {
     setTheme(selectedTheme)
     setShowThemeSelector(false)
   }
@@ -34,11 +34,11 @@ export default function ThemeSelector() {
                   Welcome! Choose Your Experience
                 </h1>
                 <p className="text-gray-600 text-lg">
-                  I've created three different websites for different audiences. Pick the one that matches what you're looking for:
+                  I've created two different websites for different audiences. Pick the one that matches what you're looking for:
                 </p>
               </div>
 
-              <div className="grid gap-4 md:grid-cols-3 mb-6">
+              <div className="grid gap-4 md:grid-cols-2 mb-6">
                 <button
                   onClick={() => handleThemeSelect('technical')}
                   className="group p-4 border-2 border-gray-200 rounded-xl hover:border-green-500 hover:bg-green-50 transition-all duration-300 text-center"
@@ -58,28 +58,6 @@ export default function ThemeSelector() {
                   
                   <p className="text-xs text-gray-500">
                     Software Engineer, Web Developer, QA Engineer, IT roles
-                  </p>
-                </button>
-
-                <button
-                  onClick={() => handleThemeSelect('professional')}
-                  className="group p-4 border-2 border-gray-200 rounded-xl hover:border-blue-500 hover:bg-blue-50 transition-all duration-300 text-center"
-                >
-                  <div className="p-3 bg-blue-100 rounded-lg group-hover:bg-blue-200 transition-colors mx-auto w-fit mb-3">
-                    <Briefcase className="text-blue-600" size={24} />
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
-                    Administrative Portfolio
-                  </h3>
-                  <p className="text-blue-600 font-semibold mb-3">For Business & Admin Roles</p>
-                  
-                  <p className="text-sm text-gray-600 mb-3">
-                    Highlighting administrative experience, operations, and business skills.
-                  </p>
-                  
-                  <p className="text-xs text-gray-500">
-                    Admin Assistant, Operations, Project Coordinator, Customer Service
                   </p>
                 </button>
 

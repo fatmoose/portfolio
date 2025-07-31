@@ -42,6 +42,30 @@ const experiences = [
     technologies: ['Next.js', 'AWS Lambda', 'Mapbox GL JS', 'D3.js', 'Agile', 'Data Visualization']
   },
   {
+    title: 'Web Developer',
+    company: 'UW CIRCLE',
+    location: 'Seattle, WA',
+    duration: 'May 2020 – Jun 2022',
+    type: 'Part-time',
+    description: [
+      'Created and maintained informational university site using React and JavaScript to promote cross cultural engagement events',
+      'Integrated Instagram and Printful APIs to support e-commerce functionality for club merchandise ordering'
+    ],
+    technologies: ['React', 'JavaScript', 'Instagram API', 'Printful API', 'E-commerce']
+  },
+  {
+    title: 'Frontend Developer',
+    company: 'SMASH',
+    location: 'Seattle, WA',
+    duration: 'Jan 2020 – Jun 2021',
+    type: 'Part-time',
+    description: [
+      'Developed core components of a social networking platform using HTML, CSS/SCSS, JavaScript, and React',
+      'Implemented responsive layout for sign-up, login, and landing pages based on stakeholder design specifications'
+    ],
+    technologies: ['HTML', 'CSS', 'SCSS', 'JavaScript', 'React', 'Responsive Design']
+  },
+  {
     title: 'Software Development Intern',
     company: 'SDP Research Lab',
     location: 'Seattle, WA',

@@ -9,14 +9,10 @@ import Skills from '@/components/Skills'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
 import MatrixBackground from '@/components/MatrixBackground'
-import ProfessionalHero from '@/components/ProfessionalHero'
-import ProfessionalExperience from '@/components/ProfessionalExperience'
-import ProfessionalSkills from '@/components/ProfessionalSkills'
 import ThemeSelector from '@/components/ThemeSelector'
 import ThemeWrapper from '@/components/ThemeWrapper'
 import ModernHero from '@/components/ModernHero'
 import ModernAbout from '@/components/ModernAbout'
-import DataOperations from '@/components/DataOperations'
 import GISHero from '@/components/GISHero'
 import GISAbout from '@/components/GISAbout'
 import GISExperience from '@/components/GISExperience'
@@ -37,17 +33,17 @@ export default function Home() {
   }, [])
 
   if (isLoading) {
-    const loadingBg = theme === 'professional' ? 'bg-gray-50' : theme === 'technical' ? 'bg-terminal-bg' : 'bg-slate-900'
-    const loadingText = theme === 'professional' ? 'text-blue-600' : theme === 'technical' ? 'text-terminal-green' : 'text-emerald-400'
-    const loadingBar = theme === 'professional' ? 'bg-blue-600' : theme === 'technical' ? 'bg-terminal-green' : 'bg-emerald-500'
-    const loadingBarBg = theme === 'professional' ? 'bg-gray-200' : theme === 'technical' ? 'bg-terminal-gray' : 'bg-slate-700'
+    const loadingBg = theme === 'technical' ? 'bg-terminal-bg' : 'bg-slate-900'
+    const loadingText = theme === 'technical' ? 'text-terminal-green' : 'text-emerald-400'
+    const loadingBar = theme === 'technical' ? 'bg-terminal-green' : 'bg-emerald-500'
+    const loadingBarBg = theme === 'technical' ? 'bg-terminal-gray' : 'bg-slate-700'
     
     return (
       <div className={`min-h-screen ${loadingBg} flex items-center justify-center px-4`}>
         <div className="text-center max-w-md mx-auto">
           <div className={`${loadingText} text-2xl mb-6 font-medium`}>
             <span className="animate-pulse">
-              {theme === 'professional' ? 'Loading Portfolio...' : theme === 'technical' ? 'Initializing...' : 'Loading GIS Platform...'}
+              {theme === 'technical' ? 'Initializing...' : 'Loading GIS Platform...'}
             </span>
           </div>
           <div className={`w-64 h-2 ${loadingBarBg} rounded-full overflow-hidden mx-auto mb-4`}>
@@ -60,31 +56,11 @@ export default function Home() {
           </div>
           <div className={`${loadingText} text-sm opacity-80`}>
             <span className="animate-pulse">
-              {theme === 'professional' ? 'Preparing experience' : theme === 'technical' ? 'Loading system' : 'Initializing spatial data'}
+              {theme === 'technical' ? 'Loading system' : 'Initializing spatial data'}
             </span>
           </div>
         </div>
       </div>
-    )
-  }
-
-  if (theme === 'professional') {
-    return (
-      <ThemeWrapper>
-        <main className="min-h-screen bg-slate-50 relative">
-          <ThemeSelector />
-          <Navigation />
-          
-          <div>
-            <ProfessionalHero />
-            <ModernAbout />
-            <ProfessionalExperience />
-            <ProfessionalSkills />
-            {/* <DataOperations /> */}
-            <Contact />
-          </div>
-        </main>
-      </ThemeWrapper>
     )
   }
 
